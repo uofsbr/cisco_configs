@@ -33,7 +33,7 @@
 
 > R1(config-line)#**login local**
 
-> R1(config-line)# **exec-timeout** [10] [0] (M, S)
+> R1(config-line)# **exec-timeout** [10] [0] (M, S) (Optional)
 
 ## 6 - SSH Public Key Authentication
 ### SSH key pair generation on Linux:
@@ -59,7 +59,7 @@
 
 > user@host:~# fold -b -w 72 /home/user/.ssh/new-key.pub
 
-### Insterting Key on Device
+### Inserting Key on Device
 > R1(config)#**ip ssh pubkey-chain**
 
 > R1(conf-ssh-pubkey)#**username** [*username*]
