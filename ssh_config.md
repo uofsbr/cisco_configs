@@ -1,4 +1,4 @@
-# SSH SERVER CREATION 
+# SSH Access Configuration
 
 ## 0 - Definig a User
 > Router(config)#**username** [*username*] **privilege** [*1-15*] **password** [*password*] 
