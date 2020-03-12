@@ -1,9 +1,12 @@
 # SSH SERVER CREATION 
 
-## 1 - Definig a host name
+## 0 - Definig a User
+> Router(config)#**username** [*username*] **privilege** [*1-15*] **password** [*password*] 
+
+## 1 - Definig a Host Name
 > Router(config)#**hostname** [*hostname*]
 
-## 2 - Definig a domain-name
+## 2 - Definig a Domain-Name
 > R1(config)#**ip domain-name** [*domain-name*]
 
 ## 3 - Generating keys
@@ -20,10 +23,10 @@
 
 		 Mar 1 1:33:27.329: %SSH-5-ENABLED: SSH 1.99 has been enabled
 
-## 4 - Setting ssh to version 2
+## 4 - Setting SSH to Version 2
 > R1(config)#**ip ssh version 2**
 
-## 5 - Configuring vty lines
+## 5 - Configuring Vty Lines
 > R1(config)#**line vty** 0 4 
 
 > R1(config-line)#**transport input ssh**
@@ -32,7 +35,7 @@
 
 > R1(config-line)# **exec-timeout** [10] [0] (M, S)
 
-## 6 - SSH public key authentication
+## 6 - SSH Public Key Authentication
 ### SSH key pair generation on Linux:
 #### Default Key Name
  > user@host:~# ssh-keygen -t rsa -b 4096
@@ -52,7 +55,7 @@
 
 		id_rsa id_rsa.pub new-key new-key.pub
 
-> user@host:~# ssh <user>@<ip> -i new-key
+> user@host:~# ssh [*user*]@[*ip*] -i new-key
 
 > user@host:~# fold -b -w 72 /home/user/.ssh/new-key.pub
 
